@@ -6,3 +6,16 @@ The goal is to retrieve flag, it should be like FLAG{.......}
 
 ## Chosen ciphertext attack
 Chosen cipher attack is an attack model that If an attacker can gather information by obtaining the decryption of cipertexts, attacker can then retrieve the plaintext without having the key.
+
+## Given
+- flag.enc
+- pub.pem
+- decrypter.py
+
+## Solution
+- createMessage.py: According given public key, generating a fake message to send to decrypt server.
+- decryptMessage.py: According reply from decrypt server. decrypt message with the given public key and chosen X
+- flag.txt: decrypted message
+
+## Dependency
+- pycrypto
